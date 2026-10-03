@@ -3,8 +3,9 @@ FROM nginx:alpine
 # Clean default nginx website
 RUN rm -rf /usr/share/nginx/html/*
 
-# Copy the static single-page site
+# Copy the static single-page site and assets
 COPY index.html /usr/share/nginx/html/index.html
+COPY assets/ /usr/share/nginx/html/assets/
 
 # Expose standard web port
 EXPOSE 80
