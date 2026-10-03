@@ -1,0 +1,10 @@
+services:
+  thirumurugan-real-estate:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: thirumurugan-real-estate:latest
+    container_name: thirumurugan_real_estate_app
+    restart: unless-stopped
+    ports:
+      - "8080:80"
